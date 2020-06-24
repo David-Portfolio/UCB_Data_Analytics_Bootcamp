@@ -1,0 +1,33 @@
+# PyBer_Analysis
+*Note: the paragraphs are not in the same order as stated in "Delivering Results" however all analysis is included.*
+
+   The purpose of this assignment is to follow-up on the presentation that analyzed PyBer data by providing the technical analysis: (1) a DataFrame that summarizes the key metrics for the ride-sharing data by city type (2) a multi-line chart with one line for each city type, that shows the sum of the fares for each week. In addition, this README.me document will explain the analysis, the process to generate it and recommendations/next steps.
+   
+   As you'll recall from the presentation, PyBer data was extracted in the form of 2 excel files: (1) city_data (2) ride_data, which was merged into a DataFrame. The groupby() function was used to create the summary DataFrame displaying the Total Rides, Total Drivers, Total Fares, Average Fare per Ride and Average Fare per Driver by the City Type (Rural, Suburban and Urban). A challenge was encountered during the step to get the total drivers by city type. Using the merged DataFrame, the driver count for each city (aggregated) in the city_data was mapped across all records in the ride_data which overstated the total driver count. Applying different mathematical calculations to derive the total drivers by city type from the merged DataFrame did not yield accurate numbers, so the workaround was to use the city_data file with the groupy() function. The average fare per ride and driver was calculated by dividing the total fare for each city type by the total rides for each city type and the total drivers for each city type respectively.
+
+![Summary_DataFrame](https://user-images.githubusercontent.com/65242270/84582106-95537700-ad9c-11ea-8ac9-2479ea4c2938.JPG)
+
+###### Summary DateFrame Insights:
+    -Urban cities had the highest total fares followed by Suburban and Rural cities. There is a positive correlation between the total        rides and total fares (the more rides, the more fares). Interestingly, Urban cities have more total drivers than total rides, which
+     is the inverse for Suburban and Rural cities having more total rides than total drivers.
+    -As we we look at the other columns for average fare per ride and average fare per driver, Rural cities had the highest average fare      per ride and average fare per driver followed by Suburban and Urban cities. 
+    -From these insights, we can infer that Rural cities have less population size and greater ride distances (assuming fares                are calculated based on length of the ride) or it's more expensive because there are less rides and drivers, thus the higher            average fare per ride and average fare per driver compared to Suburban and Urban cities. This correlation holds true comparing          suburban and urban cities.
+The multiple-line plots for the sum of the fares for each city type (Module5_Challenge.png) was created using the Pandas and Matplotlib libraries from the merged DataFrames as well. The date column was set to the index by using the info() method on the DataFrame which enabled us to create a pivot table DataFrame displaying total fare for each city type by date in each row. Before creating the chart, we used the pandas loc attribute to filter for the date ranges from 2019-01-01 to 2019-04-28 and then resampled the data into weekly bins. Note that prior to this, each date with time stamp was listed for each city type. When a pivot table is created, every date with time stamp is mapped across each city type, whether there was a fare for that date with time stamp or not. This resulted in NaN's displayed in the pivot table. Resampling the data into weekly bins organized the data to be better presented in a chart with the object-oriented interface method using df.plot().
+
+![Module5_Challenge](https://user-images.githubusercontent.com/65242270/84582154-435f2100-ad9d-11ea-9bd9-6898fc4b2a7c.png)
+
+###### Total Fare by City Type Chart Insights:
+    -Similar to the trend in the summary DataFrame, the total fare is highest for Urban cities followed by Suburban and Rural cities.        With this chart including the date range, we can see that this trend is true for the months Jan-Apr 2019.
+    -The top 2 peak weeks of total fares for each city type:
+              --Urban: 2019-02-24, 2019-03-10
+              --Suburban: 2019-02-24, 2019-04-28
+              --Rural: 2019-02-24, 2019-04-07
+              --The week of 2019-02-24 is a top 2 peak week for all city types.
+With the date ranges factored into the analysis which agrees with the summary, we can further infer that would be more lucrative to be a driver in a Rural city followed by Suburban and Urban cities (it is more costly as a rider in a Rural city followed by Suburban and Urban cities). However, there are limitations to both technical analysis. The summary DataFrame provides an aggregate view (no date ranges) and as mentioned, the chart does provide date ranges for the period 2019-01-01 to 2019-04-28. Additional weeks/months would be helpful to see the trend across a longer time series. For example, at the week of 2019-04-28, you'll notice that the total fare for Suburban is 1 of the top 2 peak weeks. Extending the time series could reveal insights that are not yet presented. Of course, the constraints on depedent on the data available.
+
+   If we look again at the summary DataFrame, we can derive the average number of rides per driver by city type (this would have been a good data point to be included): Rural (1.6 rides per driver), Suburban (1.3 rides per driver), and Urban (0.7 rides per driver). Note that drivers do not have control on the length of the ride nor the number of rides available. As such, we can limit the number of drivers in the Urban and Suburban cities to increase the average fare per ride and driver. There is clearly a ride demand issue for Urban cities with less than 1 ride per driver on average. To dive deeper into this, we could include driver id, travel origination city and destination city into the analysis. A Rural driver could be driving from a Rural city to a Urban city and back. Understanding how the fare data is categorized mapped with the specific driver will provide further insight. Using similar templates to the summary DataFrame and chart, we can recreate one for each city type and replace where the city type was previously with the city.
+    -3 summary DataFrames (Rural, Suburban, Urban) with the cities on the rows. Additional column for average number of rides per            driver.
+    -3 multi-line or other chart type (Rural, Suburban, Urban) with the lines being the cities. Extend the time series if the data is        available.
+
+   
+   
