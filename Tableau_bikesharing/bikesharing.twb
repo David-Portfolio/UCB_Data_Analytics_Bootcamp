@@ -1321,7 +1321,7 @@
       <size sizing-mode='automatic' />
       <zones>
         <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='38' w='100000' x='0' y='0'>
-          <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' forceUpdate='true' h='98692' id='26' is-centered='0' is-scaled='1' w='99286' x='357' y='654'>
+          <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' h='98692' id='26' is-centered='0' is-scaled='1' w='99286' x='357' y='654'>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
@@ -1347,9 +1347,9 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='72' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98692' id='71' param='vert' w='99286' x='357' y='654'>
-                <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' fixed-size='280' forceUpdate='true' h='98692' id='26' is-centered='0' is-fixed='true' is-scaled='1' w='99286' x='357' y='654'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='74' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='73' param='vert' w='84000' x='8000' y='8000'>
+                <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' fixed-size='280' h='98692' id='26' is-centered='0' is-fixed='true' is-scaled='1' w='99286' x='357' y='654'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1417,8 +1417,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='30' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98720' id='29' param='vert' w='98592' x='704' y='640'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='32' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='31' param='vert' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='98720' id='3' is-fixed='true' name='Start Time | # Trips' w='98592' x='704' y='640'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1466,8 +1466,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='26' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98720' id='25' param='vert' w='98592' x='704' y='640'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='28' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='27' param='vert' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='98720' id='3' is-fixed='true' name='Start Time | Trip Dur' w='98592' x='704' y='640'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1515,8 +1515,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='22' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98720' id='21' param='vert' w='98592' x='704' y='640'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='24' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='23' param='vert' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='98720' id='3' is-fixed='true' name='NYC McDs' w='98592' x='704' y='640'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1564,8 +1564,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='22' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98720' id='21' param='vert' w='98592' x='704' y='640'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='24' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='23' param='vert' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='98720' id='3' is-fixed='true' name='Des Moines McDs' w='98592' x='704' y='640'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1624,6 +1624,9 @@
           <format attr='font-style' id='story-description_21' value='normal' />
           <format attr='font-weight' id='story-description_21' value='normal' />
           <format attr='text-decoration' id='story-description_21' value='none' />
+          <format attr='font-style' id='story-description_22' value='normal' />
+          <format attr='font-weight' id='story-description_22' value='normal' />
+          <format attr='text-decoration' id='story-description_22' value='none' />
         </style-rule>
         <style-rule element='story-title'>
           <format attr='font-size' value='24' />
@@ -1667,6 +1670,7 @@
                             </dashboard>
                           </capturedDeltas>
                         </story-point>
+                        <story-point caption='NYC: User Type as % of Pop' captured-sheet='' id='27' />
                         <story-point caption='Mean work travel time' captured-sheet='' id='22' />
                         <story-point caption='Des Moines: McDs' captured-sheet='5' id='21' />
                         <story-point caption='End' captured-sheet='' id='26' />
@@ -1771,6 +1775,22 @@
         <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' forceUpdate='true' h='55809' hidden='true' id='21' story-point-id='26' w='72736' x='17618' y='19813'>
           <formatted-text>
             <run bold='true' fontsize='26'>Questions / Next Steps</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' forceUpdate='true' h='55809' hidden='true' id='22' story-point-id='27' w='72736' x='17618' y='19813'>
+          <formatted-text>
+            <run bold='true' fontsize='20' underline='true'>Population using Citibike:</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#0000ff' fontsize='20'>New York City (8,336,817)</run>
+            <run>&#10;---&#10;</run>
+            <run bold='true' fontcolor='#0000ff' fontsize='15'>Citibike: 28.1% (2,344,224)</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#000000' fontsize='15'>Subscription: 22.8% (1,900,359)</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#000000' fontsize='15'>Customer: 5.3% (443,865)</run>
+            <run>Æ&#10;&#10;&#10;</run>
+            <run fontsize='8'>*</run>
+            <run fontsize='8' italic='true'>Sources: United States Census Bureau, 2019 &amp; citibike trip data for Aug 2019</run>
           </formatted-text>
         </zone>
       </zones>
@@ -2060,7 +2080,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='26' />
+      <active id='-1' />
       <simple-id uuid='{B8CB5452-9651-4EC9-A4A8-AD669C523340}' />
     </window>
     <window class='dashboard' name='2' tab-color='#dec77b'>
@@ -2069,7 +2089,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='3' />
+      <active id='-1' />
       <simple-id uuid='{720752BB-BF4C-4CA0-8053-17D9448A2B10}' />
     </window>
     <window class='dashboard' name='3' tab-color='#dec77b'>
@@ -2078,7 +2098,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='3' />
+      <active id='-1' />
       <simple-id uuid='{B6ABD10C-097F-4C18-966F-147711FC8777}' />
     </window>
     <window class='dashboard' name='4' tab-color='#dec77b'>
@@ -2087,7 +2107,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='3' />
+      <active id='-1' />
       <simple-id uuid='{A8F03ED8-AB04-43C9-B8FF-C6B78CCF481D}' />
     </window>
     <window class='dashboard' name='5' tab-color='#dec77b'>
@@ -3175,41 +3195,41 @@
     </thumbnail>
     <thumbnail height='192' name='Citibike-Story' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
-      AAAHG0lEQVR4nO3dS1Mb6RmG4efrbh0RIAnJYHvG9rgmVZOZSnmRRVJZ5ZdnlyySLJJVMpMU
-      BoM5HyShU6ul7ixck3LV2GUbZGDmua8VhZD6BXR3f2oJEYqiKASYiu56AOAuEQCsEQCsEQCs
-      EQCsEQCsEQCsEQCsEQCsEQCsEQCsEQCsEQCsEQCsEQCsEQCsEQCsEQCsEQCsEQCsJde9Yp7n
-      uri4WOYsS7GysqL7+Hf+pVJJWZbd9Rg/cV/nSpJE8/n882/nJlfu9XrLmmNpSqWSFovFXY/x
-      TtPp9K5HeKf7NlcIQUVRKE3Tz74tlkCwRgD4ZHme3/UIS7OUABbZVLv7+299Yqb/vnq9jJu+
-      kcngUts7u9o/PNZ9elhwdXmpD61uT46OdNsLubOjA+3u7ujs8uq9X1MUhfbf/l1/QJHPNZnc
-      bClzuP9Ku7s7uugN33n5eDy+9m3f6DHAj/J5qqPTU+1tfy8VQY8ef6k//flvqvzx9/rnP77X
-      N9891+vDMzXWWvrti2+XscmPko6n6jx6rPO9XR0ezJSmqZqdLR3vvVIoV/Srr58rCuHW5vnR
-      +GqocqulkKV6fXCkqFxTNu6pUFD7wSNdnBzpajjRxtaWpqMrHZ2eamWtq8vjHTVam5oM+wpJ
-      RVudpk5OT9VobqrTatx4rulsoS+fPNXL7ZcaXh4pWwR1mys6HWUqRbGePnmsbHSpcqOtYjHV
-      D//ZU2dzU7NRT2k6UaP7TK1Kqn9vn0j5TJUk0sOnzzQaTlSrVa491yxbaGNjXae9gWbToRrl
-      SKNF0KA/UHfzoaajgc7PjlXkhSqNlka9MxVxWau1RKPpQp32qo5OL9V9sKneyYHmIVGzUdXV
-      OF3uEqi22tSLb59rHmr65tffqdUo6dnXv1HRH+jF7/6g+fRymZv7CLkO9vbUaG0oyxZ69tVX
-      6l0ca2W1qXatoml+t4eF6XioeSENBgPFpZoeb3U1uDjTSrOrTmtdkjQcXikEqd8bqFRd0YO1
-      igbjmbLpRP2roUIk9Xvv32N/iiydaG9vTw8edhSihrbWy7oYpOo++kJR8eZ4dHIx0oN2Q4pK
-      qpQjpelUWR705WZb6TxXUSzU2tjU6tqqNtt1TbNc2fxmx7J5NtNoMlMcSbNspsU8k+Kykigo
-      TVPNZpmKkOjJsy80vTxXb5Rqnk5UqtSUz2fKQ6IkSOmkr4veWPNZqrhcUbGYL+cIEMUltZtN
-      RcqVVOpqrFVUOXqp/qStdntV7UZNf//rX9TqPlzG5j5aqVLXk40t1UuxzucT7ezsqrP1UNv/
-      +kHrnY460e3v/SWpXEl08OqV1upVBUn1ek31WkVRXNJqs6Xe+ZnmCylIiqJIIcSq16sqJ2Ul
-      tYY21uoKpaqSOCiLYtWr19+7vm2t2Va721GQ1I/OdTqM1F6JdLi/p1ajIRWFivBm3VzkC4U4
-      UQiRyrG0d3CsUqehEJVUrcRaRDUlpUJKYoVq+UZzVSplTadTVeprWkwGOu1N1N5sKIpjhRBU
-      r9f0ZlcWaaXZVlTuS3FZkaQ4jlTkheI4Vohr2uyuax4SxSEojiOF6745bp7n2t7evtE39jl0
-      u90PnAZd6OxsoE6ndWszSVK1Wr13pxulD8817p2paGxoJQmaT/q6WtTUavz0Dr2YDtSbV7Xx
-      jss+VQhB5XL5Vk6DLuUI8PMS3/qd/+es3uz8/+Oktq73/eTi6po2bmekpeI0KKwRAKwRAKwR
-      AKwRAKwRAKwRAKzd6HmAOI6XNcfShBAU7uD1PR/CXB/vzbPftzPXtZ8JBn4JWALBGgHAGgHA
-      GgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAmuG7
-      Q99Ph0fHms3u53+3/CUjgHsiyxYq11bvegw7LIFgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBg
-      jQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBg
-      jQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBg
-      jQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBg
-      jQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBg
-      jQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBg
-      jQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBg
-      jQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBg7X80vedUO5dpFQAAAABJ
-      RU5ErkJggg==
+      AAAHQklEQVR4nO3d228baR3G8WcOPiZ2bcfOabtpCQhYDhJaIYTEDZf81wiEkCjiCm5WpYe0
+      TuPGSR0fao9nbA8XpV2g2e1208ZZnu/n0omsn0fzHb1+44mDPM9zAabCdQ8ArBMBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwFosSXme
+      6/z8fN2zvGVjY0M38Z79QqGgLMvWPcZbbupccRxrsVise4z/EgSBwjB8FYAkXVxcrHOeS8Vx
+      rNVqte4xLpUkybpHuNRNnKtcLt+4uaIoUhiGLIHgjQDMrVYr3bxF5vV5K4B8tdSjo0dfPrBa
+      6p+Pn1znTJeavxzp4cNHenrc0016WzAZDPSuVXe/19PyWqb50vlpT0dHR+q/GH7Nb+Xqdrvf
+      +DnzfKnp9GpLmefPujo6OtLZYHTpz6fT6ZWe/33F//tAnufq9Z6p9/SxlOdq7x/q93/8gyq/
+      +63+9qe/66ef/1BPu6eq1m7pV5///NoGzZJEze09jU6PdXLS1Xw+V73V0dnxsYJCQYeH31cc
+      Bdc2z2uz8URxs6lomarbPVEQl7ScTyRJ9a1dDc97Go1mau7uaj6dqHfaV3mzqfH5scr1ttLp
+      SHlQ1P5OS6f9viq1tra36leea55k+uTgQEcPH2k6PFO2yNVu1XU6nCqOIn3vzqdaTEcqVG8p
+      WM31xf0jbXV2tEhGSpOZSq3b2tlc6R9fnChQqlIcau/wBxqPJqpWy996rmS+ULvd0PPzoRbz
+      qRrVWINEGl9cqLOzq/lsosF5X8vVSoVKXcl4oKUiNTbLGs9Stbca6vX6am/vavTiubJVoGa9
+      quEk0e7+bVVLb53SX+srl0DFjbp++YsfaZYV9ePPfqJOo6JP7n6maDTUz379G+XZ5QV/PLlO
+      jruq1FvK0oXu3r2r0eBM1c1b6tQ3NM3Wu8uQTl8qW0nD8UhhXNLt23uaDM9VqrbUaTUkSS9f
+      TqRAGg1HiooV7bVqGk5mWqQzDUYTKQg0Gn6Y47rIEnWfPlVnpy0FZe1vbejFcKr2zr4KypVL
+      6r8YqdOqS0GscjFWkiRKs1wHe23NFyspX6ne6qhWr2u/vaFZlitLr7bLtFykmkzniqJAaZYq
+      Xy60DGIV4lDz+VxpmmmpUAd3PlU2Hmownmq1SBQWK1otMy3zUIU4VJKMNRhMtFqkUlySVgvN
+      0/S953krlyAI1GpuKS4UFMRl3apHmg/mOhum6nQa2tvZ0l/++mfVW9tXOhDvKyqWdXCnqc1y
+      UQOlevz4SK3tHR3dv69lc0sH2+9X/odSLBf07MkTNaoVBZI2qlVVq2UFQaTNWkOjizOlmbQj
+      KQxDKQhVrVZUKrx6Te1GXQoLKsahsixUtfLtr67/abPeVKPTVqhXy7TeRa6tWlHdZ1016zWF
+      ea5lLsVhIC1XCqJIQRioVAz15PhE+a07UhCrWs6VLyuKilIxCqUrXP0lqVQqap4kKpQ3pOyl
+      eudD1bYqWkaRgiBQtVr593uSQNV6Q9uFUKsgVhTkisJIeb5SGEYKw5K2Ow1leaRCGCiKIgV6
+      /xVAkL+iBw8eXOmFfQztdvsd26BLnZ0N1W63rm0m6WZu60nvnisZXygrbqpWirVIxhpnBTVr
+      l5zQ6UT9JFan/mFivInH6/U26Houmx9MdO0n/3dZudbQ61M6LtfU/Krzu7ipTvG6plovtkFh
+      jQBgjQBgjQBgjQBgjQBgjQBg7c3fAaIoWucclwqCQEFw/Z/veRfm+uZez3Rj53r9Nan9fl8n
+      Jyfrngu4Vm9uibx3796NvfsK+FjeLIEODw81m83WOQtw7QK+KR7O2AWCNQKANQKANQKANQKA
+      NQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKAte/4f4f+/3HSe640ve4vUgIB
+      3BBZtlSxUlv3GHZYAsEaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcDavwCbRQVFScf7BgAAAABJRU5ErkJggg==
     </thumbnail>
     <thumbnail height='192' name='Des Moines McDs' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
