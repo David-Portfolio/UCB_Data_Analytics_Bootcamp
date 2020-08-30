@@ -1,0 +1,800 @@
+> library(pastecs)
+> stat.desc(PSI)
+Error in stat.desc(PSI) : object 'PSI' not found
+> PSI0<-read.table("Suspension_Coil.csv"", sep=",", header=T")
+Error: unexpected string constant in "PSI0<-read.table("Suspension_Coil.csv"", sep=""
+> PSI0<-read.table("Suspension_Coil.csv", sep=",", header=T)
+> attach(PSI0)
+> stat.desc(PSI)
+nbr.val     nbr.null       nbr.na          min          max        range 
+1.500000e+02 0.000000e+00 0.000000e+00 1.463064e+03 1.535568e+03 7.250402e+01 
+sum       median         mean      SE.mean CI.mean.0.95          var 
+2.249297e+05 1.499747e+03 1.499531e+03 7.129030e-01 1.408706e+00 7.623459e+01 
+std.dev     coef.var 
+8.731242e+00 5.822649e-03 
+> stat.desc(PSI[, -5])
+Error in PSI[, -5] : incorrect number of dimensions
+> stat.desc(PSI, Manufacturing_Lot)
+median         mean      SE.mean CI.mean.0.95          var      std.dev 
+1.499747e+03 1.499531e+03 7.129030e-01 1.408706e+00 7.623459e+01 8.731242e+00 
+coef.var 
+5.822649e-03 
+Warning message:
+  In if (basic == TRUE) { :
+      the condition has length > 1 and only the first element will be used
+    > summary(PSI0)
+    VehicleID         Manufacturing_Lot       PSI      
+    Length:150         Length:150         Min.   :1463  
+    Class :character   Class :character   1st Qu.:1497  
+    Mode  :character   Mode  :character   Median :1500  
+    Mean   :1500  
+    3rd Qu.:1501  
+    Max.   :1536  
+    > stat.desc(PSI0)
+    VehicleID Manufacturing_Lot          PSI
+    nbr.val         NA                NA 1.500000e+02
+    nbr.null        NA                NA 0.000000e+00
+    nbr.na          NA                NA 0.000000e+00
+    min             NA                NA 1.463064e+03
+    max             NA                NA 1.535568e+03
+    range           NA                NA 7.250402e+01
+    sum             NA                NA 2.249297e+05
+    median          NA                NA 1.499747e+03
+    mean            NA                NA 1.499531e+03
+    SE.mean         NA                NA 7.129030e-01
+    CI.mean         NA                NA 1.408706e+00
+    var             NA                NA 7.623459e+01
+    std.dev         NA                NA 8.731242e+00
+    coef.var        NA                NA 5.822649e-03
+    > df1 = data.frame("Suspension_Coil.csv")
+    > df1
+    X.Suspension_Coil.csv.
+    1    Suspension_Coil.csv
+    > df1 = data.frame(Suspension_Coil.csv)
+    Error in data.frame(Suspension_Coil.csv) : 
+      object 'Suspension_Coil.csv' not found
+    > summary(df1["PSI"]="Lot1")
+    Error: unexpected '=' in "summary(df1["PSI"]="
+    > stat.desc(df1["PSI"]="Lot1")
+    Error: unexpected '=' in "stat.desc(df1["PSI"]="
+    > by(PSI0, PSI0$Manufacturing_Lot, summary)
+    PSI0$Manufacturing_Lot: Lot1
+    VehicleID         Manufacturing_Lot       PSI      
+    Length:50          Length:50          Min.   :1497  
+    Class :character   Class :character   1st Qu.:1499  
+    Mode  :character   Mode  :character   Median :1500  
+    Mean   :1500  
+    3rd Qu.:1501  
+    Max.   :1502  
+    --------------------------------------------------------------- 
+      PSI0$Manufacturing_Lot: Lot2
+    VehicleID         Manufacturing_Lot       PSI      
+    Length:50          Length:50          Min.   :1490  
+    Class :character   Class :character   1st Qu.:1497  
+    Mode  :character   Mode  :character   Median :1499  
+    Mean   :1500  
+    3rd Qu.:1502  
+    Max.   :1506  
+    --------------------------------------------------------------- 
+      PSI0$Manufacturing_Lot: Lot3
+    VehicleID         Manufacturing_Lot       PSI      
+    Length:50          Length:50          Min.   :1463  
+    Class :character   Class :character   1st Qu.:1490  
+    Mode  :character   Mode  :character   Median :1498  
+    Mean   :1499  
+    3rd Qu.:1510  
+    Max.   :1536  
+    > by(PSI0, PSI0$Manufacturing_Lot, PSI)
+    Error in FUN(data[x, , drop = FALSE], ...) : 
+      could not find function "FUN"
+    > by(PSI0, PSI0$Manufacturing_Lot, summary)
+    PSI0$Manufacturing_Lot: Lot1
+    VehicleID         Manufacturing_Lot       PSI      
+    Length:50          Length:50          Min.   :1497  
+    Class :character   Class :character   1st Qu.:1499  
+    Mode  :character   Mode  :character   Median :1500  
+    Mean   :1500  
+    3rd Qu.:1501  
+    Max.   :1502  
+    --------------------------------------------------------------- 
+      PSI0$Manufacturing_Lot: Lot2
+    VehicleID         Manufacturing_Lot       PSI      
+    Length:50          Length:50          Min.   :1490  
+    Class :character   Class :character   1st Qu.:1497  
+    Mode  :character   Mode  :character   Median :1499  
+    Mean   :1500  
+    3rd Qu.:1502  
+    Max.   :1506  
+    --------------------------------------------------------------- 
+      PSI0$Manufacturing_Lot: Lot3
+    VehicleID         Manufacturing_Lot       PSI      
+    Length:50          Length:50          Min.   :1463  
+    Class :character   Class :character   1st Qu.:1490  
+    Mode  :character   Mode  :character   Median :1498  
+    Mean   :1499  
+    3rd Qu.:1510  
+    Max.   :1536  
+    > stat.desc(PSI0)
+    VehicleID Manufacturing_Lot          PSI
+    nbr.val         NA                NA 1.500000e+02
+    nbr.null        NA                NA 0.000000e+00
+    nbr.na          NA                NA 0.000000e+00
+    min             NA                NA 1.463064e+03
+    max             NA                NA 1.535568e+03
+    range           NA                NA 7.250402e+01
+    sum             NA                NA 2.249297e+05
+    median          NA                NA 1.499747e+03
+    mean            NA                NA 1.499531e+03
+    SE.mean         NA                NA 7.129030e-01
+    CI.mean         NA                NA 1.408706e+00
+    var             NA                NA 7.623459e+01
+    std.dev         NA                NA 8.731242e+00
+    coef.var        NA                NA 5.822649e-03
+    > by(PSI0, PSI0$Manufacturing_Lot, stat.desc)
+    PSI0$Manufacturing_Lot: Lot1
+    VehicleID Manufacturing_Lot          PSI
+    nbr.val         NA                NA 5.000000e+01
+    nbr.null        NA                NA 0.000000e+00
+    nbr.na          NA                NA 0.000000e+00
+    min             NA                NA 1.497074e+03
+    max             NA                NA 1.501567e+03
+    range           NA                NA 4.493388e+00
+    sum             NA                NA 7.500091e+04
+    median          NA                NA 1.500206e+03
+    mean            NA                NA 1.500018e+03
+    SE.mean         NA                NA 1.513951e-01
+    CI.mean         NA                NA 3.042398e-01
+    var             NA                NA 1.146024e+00
+    std.dev         NA                NA 1.070525e+00
+    coef.var        NA                NA 7.136746e-04
+    --------------------------------------------------------------- 
+      PSI0$Manufacturing_Lot: Lot2
+    VehicleID Manufacturing_Lot          PSI
+    nbr.val         NA                NA 5.000000e+01
+    nbr.null        NA                NA 0.000000e+00
+    nbr.na          NA                NA 0.000000e+00
+    min             NA                NA 1.490272e+03
+    max             NA                NA 1.505595e+03
+    range           NA                NA 1.532226e+01
+    sum             NA                NA 7.497855e+04
+    median          NA                NA 1.498873e+03
+    mean            NA                NA 1.499571e+03
+    SE.mean         NA                NA 4.501447e-01
+    CI.mean         NA                NA 9.045996e-01
+    var             NA                NA 1.013151e+01
+    std.dev         NA                NA 3.183003e+00
+    coef.var        NA                NA 2.122609e-03
+    --------------------------------------------------------------- 
+      PSI0$Manufacturing_Lot: Lot3
+    VehicleID Manufacturing_Lot          PSI
+    nbr.val         NA                NA 5.000000e+01
+    nbr.null        NA                NA 0.000000e+00
+    nbr.na          NA                NA 0.000000e+00
+    min             NA                NA 1.463064e+03
+    max             NA                NA 1.535568e+03
+    range           NA                NA 7.250402e+01
+    sum             NA                NA 7.495020e+04
+    median          NA                NA 1.497981e+03
+    mean            NA                NA 1.499004e+03
+    SE.mean         NA                NA 2.097668e+00
+    CI.mean         NA                NA 4.215422e+00
+    var             NA                NA 2.200106e+02
+    std.dev         NA                NA 1.483275e+01
+    coef.var        NA                NA 9.895073e-03
+    > stat.desc(Suspension_Coil)
+    VehicleID Manufacturing_Lot          PSI
+    nbr.val         NA                NA 1.500000e+02
+    nbr.null        NA                NA 0.000000e+00
+    nbr.na          NA                NA 0.000000e+00
+    min             NA                NA 1.463064e+03
+    max             NA                NA 1.535568e+03
+    range           NA                NA 7.250402e+01
+    sum             NA                NA 2.249297e+05
+    median          NA                NA 1.499747e+03
+    mean            NA                NA 1.499531e+03
+    SE.mean         NA                NA 7.129030e-01
+    CI.mean         NA                NA 1.408706e+00
+    var             NA                NA 7.623459e+01
+    std.dev         NA                NA 8.731242e+00
+    coef.var        NA                NA 5.822649e-03
+    > t.test(log10(sample_table$PSI0),mu=mean(log10(population_table$PSI0)))
+    Error in t.test(log10(sample_table$PSI0), mu = mean(log10(population_table$PSI0))) : 
+      object 'sample_table' not found
+    > plt <- ggplot(PSI0,aes(x=log10(PSI)))
+    Error in ggplot(PSI0, aes(x = log10(PSI))) : 
+      could not find function "ggplot"
+    > plt <- ggplot3(PSI0,aes(x=log10(PSI)))
+    Error in ggplot3(PSI0, aes(x = log10(PSI))) : 
+      could not find function "ggplot3"
+    > plt <- ggplot2(PSI0,aes(x=log10(PSI)))
+    Error in ggplot2(PSI0, aes(x = log10(PSI))) : 
+      could not find function "ggplot2"
+    > sample_table <- PSI0 %>% sample_n(50)
+    Error in PSI0 %>% sample_n(50) : could not find function "%>%"
+    > library(dplyr)
+    
+    Attaching package: 'dplyr'
+    
+    The following objects are masked from 'package:pastecs':
+      
+      first, last
+    
+    The following objects are masked from 'package:stats':
+      
+      filter, lag
+    
+    The following objects are masked from 'package:base':
+      
+      intersect, setdiff, setequal, union
+    
+    > sample_n(PSI0, 50)
+    VehicleID Manufacturing_Lot      PSI
+    1     V35127              Lot3 1486.223
+    2     V24283              Lot1 1500.881
+    3     V22022              Lot1 1498.775
+    4     V40383              Lot2 1498.796
+    5     V27412              Lot2 1498.827
+    6     V26894              Lot1 1497.074
+    7     V10053              Lot3 1493.942
+    8     V48331              Lot1 1500.940
+    9     V40607              Lot1 1500.002
+    10    V11514              Lot1 1501.567
+    11    V20689              Lot3 1527.518
+    12     V6203              Lot1 1499.552
+    13    V20839              Lot1 1499.554
+    14    V49231              Lot2 1497.814
+    15    V26325              Lot3 1491.275
+    16    V41771              Lot3 1507.975
+    17    V13774              Lot2 1498.727
+    18     V7785              Lot3 1495.571
+    19    V35190              Lot2 1496.833
+    20     V7915              Lot1 1499.061
+    21    V47096              Lot3 1495.209
+    22    V17444              Lot1 1499.923
+    23    V30892              Lot3 1499.079
+    24    V45341              Lot1 1499.130
+    25     V9627              Lot2 1498.438
+    26    V47525              Lot2 1502.791
+    27     V1405              Lot3 1488.783
+    28     V9510              Lot3 1507.573
+    29    V34990              Lot1 1497.892
+    30    V11605              Lot2 1500.754
+    31    V14941              Lot2 1497.688
+    32    V38622              Lot3 1510.136
+    33     V9537              Lot3 1495.918
+    34    V47062              Lot2 1505.393
+    35     V1763              Lot1 1499.462
+    36    V16893              Lot2 1505.112
+    37    V31118              Lot2 1500.644
+    38    V42093              Lot3 1486.386
+    39    V32735              Lot2 1502.665
+    40    V19109              Lot3 1497.492
+    41     V6004              Lot1 1500.260
+    42    V26143              Lot3 1510.266
+    43    V21383              Lot3 1505.611
+    44    V25929              Lot3 1489.633
+    45      V830              Lot3 1489.787
+    46    V35897              Lot2 1504.565
+    47    V16182              Lot2 1501.360
+    48    V38088              Lot3 1489.796
+    49    V40947              Lot1 1501.352
+    50     V7763              Lot3 1493.080
+    > t.test(log10(sample_n(PSI0, 50)),mu=mean(log10(PSI0$PSI)))
+    Error in Math.data.frame(sample_n(PSI0, 50)) : 
+      non-numeric variable(s) in data frame: VehicleID, Manufacturing_Lot
+    > sample_table <- sample_n(PSI0, 50)
+    > >t.test(log10(sample_table$PSI),mu=mean(log10(PSI0$PSI)))
+    Error: unexpected '>' in ">"
+    > >t.test(log10(sample_table),mu=mean(log10(PSI0)))
+    Error: unexpected '>' in ">"
+    > t.test(sample_test, PSI0)
+    Error in t.test(sample_test, PSI0) : object 'sample_test' not found
+    > t.test(sample_table, PSI0)
+    Error in if (stderr < 10 * .Machine$double.eps * max(abs(mx), abs(my))) stop("data are essentially constant") : 
+      missing value where TRUE/FALSE needed
+    In addition: Warning messages:
+      1: In mean.default(x) : argument is not numeric or logical: returning NA
+    2: In var(x) : NAs introduced by coercion
+    3: In mean.default(y) : argument is not numeric or logical: returning NA
+    4: In var(y) : NAs introduced by coercion
+    > summary(PSI0)
+    VehicleID         Manufacturing_Lot       PSI      
+    Length:150         Length:150         Min.   :1463  
+    Class :character   Class :character   1st Qu.:1497  
+    Mode  :character   Mode  :character   Median :1500  
+    Mean   :1500  
+    3rd Qu.:1501  
+    Max.   :1536  
+    > stat.desc(PSI)
+    nbr.val     nbr.null       nbr.na          min          max        range 
+    1.500000e+02 0.000000e+00 0.000000e+00 1.463064e+03 1.535568e+03 7.250402e+01 
+    sum       median         mean      SE.mean CI.mean.0.95          var 
+    2.249297e+05 1.499747e+03 1.499531e+03 7.129030e-01 1.408706e+00 7.623459e+01 
+    std.dev     coef.var 
+    8.731242e+00 5.822649e-03 
+    > summary(sample_table)
+    VehicleID         Manufacturing_Lot       PSI      
+    Length:50          Length:50          Min.   :1482  
+    Class :character   Class :character   1st Qu.:1497  
+    Mode  :character   Mode  :character   Median :1499  
+    Mean   :1499  
+    3rd Qu.:1501  
+    Max.   :1525  
+    > stat.desc(PSI0)
+    VehicleID Manufacturing_Lot          PSI
+    nbr.val         NA                NA 1.500000e+02
+    nbr.null        NA                NA 0.000000e+00
+    nbr.na          NA                NA 0.000000e+00
+    min             NA                NA 1.463064e+03
+    max             NA                NA 1.535568e+03
+    range           NA                NA 7.250402e+01
+    sum             NA                NA 2.249297e+05
+    median          NA                NA 1.499747e+03
+    mean            NA                NA 1.499531e+03
+    SE.mean         NA                NA 7.129030e-01
+    CI.mean         NA                NA 1.408706e+00
+    var             NA                NA 7.623459e+01
+    std.dev         NA                NA 8.731242e+00
+    coef.var        NA                NA 5.822649e-03
+    > by(PSI, PSI$Manufacturing_Lot, stat.desc)
+    Error in PSI$Manufacturing_Lot : $ operator is invalid for atomic vectors
+    > by(PSI, Manufacturing_Lot, stat.desc)
+    Manufacturing_Lot: Lot1
+    nbr.val     nbr.null       nbr.na          min          max        range 
+    5.000000e+01 0.000000e+00 0.000000e+00 1.497074e+03 1.501567e+03 4.493388e+00 
+    sum       median         mean      SE.mean CI.mean.0.95          var 
+    7.500091e+04 1.500206e+03 1.500018e+03 1.513951e-01 3.042398e-01 1.146024e+00 
+    std.dev     coef.var 
+    1.070525e+00 7.136746e-04 
+    --------------------------------------------------------------- 
+      Manufacturing_Lot: Lot2
+    nbr.val     nbr.null       nbr.na          min          max        range 
+    5.000000e+01 0.000000e+00 0.000000e+00 1.490272e+03 1.505595e+03 1.532226e+01 
+    sum       median         mean      SE.mean CI.mean.0.95          var 
+    7.497855e+04 1.498873e+03 1.499571e+03 4.501447e-01 9.045996e-01 1.013151e+01 
+    std.dev     coef.var 
+    3.183003e+00 2.122609e-03 
+    --------------------------------------------------------------- 
+      Manufacturing_Lot: Lot3
+    nbr.val     nbr.null       nbr.na          min          max        range 
+    5.000000e+01 0.000000e+00 0.000000e+00 1.463064e+03 1.535568e+03 7.250402e+01 
+    sum       median         mean      SE.mean CI.mean.0.95          var 
+    7.495020e+04 1.497981e+03 1.499004e+03 2.097668e+00 4.215422e+00 2.200106e+02 
+    std.dev     coef.var 
+    1.483275e+01 9.895073e-03 
+    > sample50 <- by(PSI, Manufacturing_Lot, stat.desc)
+    > sample_n(sample50, 50)
+    Error: `tbl` must be a data frame, not a `by` object.
+    Run `rlang::last_error()` to see where the error occurred.
+    > sample_n(PSI, 50)
+    Error: `tbl` must be a data frame, not a double vector.
+    Run `rlang::last_error()` to see where the error occurred.
+    > summary(Suspension_Coil(PSI))
+    Error in Suspension_Coil(PSI) : could not find function "Suspension_Coil"
+    > summary(Suspension_Coil.csv(PSI))
+    Error in Suspension_Coil.csv(PSI) : 
+      could not find function "Suspension_Coil.csv"
+    > stat.desc(Suspension_Coil)
+    VehicleID Manufacturing_Lot          PSI
+    nbr.val         NA                NA 1.500000e+02
+    nbr.null        NA                NA 0.000000e+00
+    nbr.na          NA                NA 0.000000e+00
+    min             NA                NA 1.463064e+03
+    max             NA                NA 1.535568e+03
+    range           NA                NA 7.250402e+01
+    sum             NA                NA 2.249297e+05
+    median          NA                NA 1.499747e+03
+    mean            NA                NA 1.499531e+03
+    SE.mean         NA                NA 7.129030e-01
+    CI.mean         NA                NA 1.408706e+00
+    var             NA                NA 7.623459e+01
+    std.dev         NA                NA 8.731242e+00
+    coef.var        NA                NA 5.822649e-03
+    > 
+      > select(PSI)
+    Error in UseMethod("select_") : 
+      no applicable method for 'select_' applied to an object of class "c('double', 'numeric')"
+    In addition: Warning message:
+      `select_()` is deprecated as of dplyr 0.7.0.
+    Please use `select()` instead.
+    This warning is displayed once every 8 hours.
+    Call `lifecycle::last_warnings()` to see where this warning was generated. 
+    > select()
+    Error in select_(.data, .dots = compat_as_lazy_dots(...)) : 
+      argument ".data" is missing, with no default
+    > Suspension_Coil %>% select(PSI)
+    # A tibble: 150 x 1
+    PSI
+    <dbl>
+      1 1499.
+    2 1500.
+    3 1501.
+    4 1500.
+    5 1498.
+    6 1500.
+    7 1500.
+    8 1501.
+    9 1501.
+    10 1501.
+    # ... with 140 more rows
+    > PSI_table <- Suspension_Coil %>% select(PSI)
+    > sample_n(PSI_table, 50)
+    # A tibble: 50 x 1
+    PSI
+    <dbl>
+      1 1505.
+    2 1503.
+    3 1499.
+    4 1501.
+    5 1502.
+    6 1500.
+    7 1525.
+    8 1498.
+    9 1497.
+    10 1499.
+    # ... with 40 more rows
+    > Sample_table <- sample_n(PSI_table, 50)
+    > t.test(sample_table, PSI_table)
+    Error in if (stderr < 10 * .Machine$double.eps * max(abs(mx), abs(my))) stop("data are essentially constant") : 
+      missing value where TRUE/FALSE needed
+    In addition: Warning messages:
+      1: In mean.default(x) : argument is not numeric or logical: returning NA
+    2: In var(x) : NAs introduced by coercion
+    > t.test(log10(sample_table),mu=mean(log10(PSI_table)))
+    Error in Math.data.frame(sample_table) : 
+      non-numeric variable(s) in data frame: VehicleID, Manufacturing_Lot
+    > 
+      > summary(sample_table)
+    VehicleID         Manufacturing_Lot       PSI      
+    Length:50          Length:50          Min.   :1482  
+    Class :character   Class :character   1st Qu.:1497  
+    Mode  :character   Mode  :character   Median :1499  
+    Mean   :1499  
+    3rd Qu.:1501  
+    Max.   :1525  
+    > summary(Sample_table)
+    PSI      
+    Min.   :1475  
+    1st Qu.:1497  
+    Median :1500  
+    Mean   :1500  
+    3rd Qu.:1502  
+    Max.   :1536  
+    > t.test(log10(Sample_table),mu=mean(log10(PSI_table)))
+    Error in t.test.default(log10(Sample_table), mu = mean(log10(PSI_table))) : 
+      'mu' must be a single number
+    In addition: Warning message:
+      In mean.default(log10(PSI_table)) :
+      argument is not numeric or logical: returning NA
+    > t.test(log10(Sample_table$PSI),mu=mean(log10(PSI_table$PSI)))
+    
+    One Sample t-test
+    
+    data:  log10(Sample_table$PSI)
+    t = 0.45964, df = 49, p-value = 0.6478
+    alternative hypothesis: true mean is not equal to 3.175948
+    95 percent confidence interval:
+      3.175315 3.176956
+    sample estimates:
+      mean of x 
+    3.176136 
+    
+    > summary(PSI_table)
+    PSI      
+    Min.   :1463  
+    1st Qu.:1497  
+    Median :1500  
+    Mean   :1500  
+    3rd Qu.:1501  
+    Max.   :1536  
+    > by(PSI_table, Manufacturing_Lot, stat.desc)
+    [1] 5.000000e+01 0.000000e+00 0.000000e+00 1.497074e+03 1.501567e+03 4.493388e+00
+    [7] 7.500091e+04 1.500206e+03 1.500018e+03 1.513951e-01 3.042398e-01 1.146024e+00
+    [13] 1.070525e+00 7.136746e-04
+    --------------------------------------------------------------- 
+      [1] 5.000000e+01 0.000000e+00 0.000000e+00 1.490272e+03 1.505595e+03 1.532226e+01
+    [7] 7.497855e+04 1.498873e+03 1.499571e+03 4.501447e-01 9.045996e-01 1.013151e+01
+    [13] 3.183003e+00 2.122609e-03
+    --------------------------------------------------------------- 
+      [1] 5.000000e+01 0.000000e+00 0.000000e+00 1.463064e+03 1.535568e+03 7.250402e+01
+    [7] 7.495020e+04 1.497981e+03 1.499004e+03 2.097668e+00 4.215422e+00 2.200106e+02
+    [13] 1.483275e+01 9.895073e-03
+    > PSI_table2 <- by(PSI_table, Manufacturing_Lot, stat.desc)
+    > sample_n(PSI_table2, 50)
+    Error: `tbl` must be a data frame, not a `by` object.
+    Run `rlang::last_error()` to see where the error occurred.
+    > sample_n(by(PSI_table, Manufacturing_Lot, stat.desc), 50)
+    Error: `tbl` must be a data frame, not a `by` object.
+    Run `rlang::last_error()` to see where the error occurred.
+    > summary(PSI_table2)
+    Length Class  Mode   
+    Lot1 14     -none- numeric
+    Lot2 14     -none- numeric
+    Lot3 14     -none- numeric
+    > Suspension_Coil %>% select(PSI_table2)
+    Note: Using an external vector in selections is ambiguous.
+    i Use `all_of(PSI_table2)` instead of `PSI_table2` to silence this message.
+    i See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>.
+    This message is displayed once per session.
+    Error: Must subset columns with a valid subscript vector.
+    x Subscript has the wrong type `by`.
+    i It must be numeric or character.
+    Run `rlang::last_error()` to see where the error occurred.
+    > PSI_table2 %>% select(PSI)
+    Error in UseMethod("select_") : 
+      no applicable method for 'select_' applied to an object of class "by"
+    > Suspension_Coil %>% select(Manufacturing_Lot, PSI)
+    # A tibble: 150 x 2
+    Manufacturing_Lot   PSI
+    <chr>             <dbl>
+      1 Lot1              1499.
+    2 Lot1              1500.
+    3 Lot1              1501.
+    4 Lot1              1500.
+    5 Lot1              1498.
+    6 Lot1              1500.
+    7 Lot1              1500.
+    8 Lot1              1501.
+    9 Lot1              1501.
+    10 Lot1              1501.
+    # ... with 140 more rows
+    > PSI_table2 <- Suspension_Coil %>% select(Manufacturing_Lot, PSI)
+    > sample_n(PSI_table2, 50)
+    # A tibble: 50 x 2
+    Manufacturing_Lot   PSI
+    <chr>             <dbl>
+      1 Lot2              1504.
+    2 Lot1              1500.
+    3 Lot1              1500.
+    4 Lot3              1510.
+    5 Lot2              1506.
+    6 Lot3              1510.
+    7 Lot2              1495.
+    8 Lot3              1483.
+    9 Lot1              1498.
+    10 Lot2              1503.
+    # ... with 40 more rows
+    > PSI_table2 <- Suspension_Coil %>% select(Manufacturing_Lot, PSI)
+    > by(PSI_table2, Manufacturing_Lot)
+    Error in FUN(data[x, , drop = FALSE], ...) : 
+      argument "FUN" is missing, with no default
+    > by(PSI_table2, Manufacturing_Lot, FUN)
+    Error in FUN(X[[i]], ...) : object 'FUN' not found
+    > by(PSI_table, Manufacturing_Lot, stat.desc)
+    [1] 5.000000e+01 0.000000e+00 0.000000e+00 1.497074e+03 1.501567e+03 4.493388e+00
+    [7] 7.500091e+04 1.500206e+03 1.500018e+03 1.513951e-01 3.042398e-01 1.146024e+00
+    [13] 1.070525e+00 7.136746e-04
+    ---------------------------------------------------------------- 
+      [1] 5.000000e+01 0.000000e+00 0.000000e+00 1.490272e+03 1.505595e+03 1.532226e+01
+    [7] 7.497855e+04 1.498873e+03 1.499571e+03 4.501447e-01 9.045996e-01 1.013151e+01
+    [13] 3.183003e+00 2.122609e-03
+    ---------------------------------------------------------------- 
+      [1] 5.000000e+01 0.000000e+00 0.000000e+00 1.463064e+03 1.535568e+03 7.250402e+01
+    [7] 7.495020e+04 1.497981e+03 1.499004e+03 2.097668e+00 4.215422e+00 2.200106e+02
+    [13] 1.483275e+01 9.895073e-03
+    > PSI_table2 <- by(PSI_table, Manufacturing_Lot, stat.desc)
+    > PSI_table2
+    [1] 5.000000e+01 0.000000e+00 0.000000e+00 1.497074e+03 1.501567e+03 4.493388e+00
+    [7] 7.500091e+04 1.500206e+03 1.500018e+03 1.513951e-01 3.042398e-01 1.146024e+00
+    [13] 1.070525e+00 7.136746e-04
+    ---------------------------------------------------------------- 
+      [1] 5.000000e+01 0.000000e+00 0.000000e+00 1.490272e+03 1.505595e+03 1.532226e+01
+    [7] 7.497855e+04 1.498873e+03 1.499571e+03 4.501447e-01 9.045996e-01 1.013151e+01
+    [13] 3.183003e+00 2.122609e-03
+    ---------------------------------------------------------------- 
+      [1] 5.000000e+01 0.000000e+00 0.000000e+00 1.463064e+03 1.535568e+03 7.250402e+01
+    [7] 7.495020e+04 1.497981e+03 1.499004e+03 2.097668e+00 4.215422e+00 2.200106e+02
+    [13] 1.483275e+01 9.895073e-03
+    > summary(PSI_table2)
+    Length Class  Mode   
+    Lot1 14     -none- numeric
+    Lot2 14     -none- numeric
+    Lot3 14     -none- numeric
+    > sample_n(PSI_table2, 50)
+    Error: `tbl` must be a data frame, not a `by` object.
+    Run `rlang::last_error()` to see where the error occurred.
+    > PSI_table2 <- Suspension_Coil %>% select(Manufacturing_Lot, PSI)
+    > sample_n(PSI_table2, 50)
+    # A tibble: 50 x 2
+    Manufacturing_Lot   PSI
+    <chr>             <dbl>
+      1 Lot2              1503.
+    2 Lot3              1466.
+    3 Lot3              1514.
+    4 Lot2              1501.
+    5 Lot1              1501.
+    6 Lot2              1502.
+    7 Lot3              1486.
+    8 Lot3              1497.
+    9 Lot3              1499.
+    10 Lot2              1498.
+    # ... with 40 more rows
+    > Sample_table2 <- sample_n(PSI_table2, 50)
+    > t.test(log10(Sample_table2$PSI),mu=mean(log10(PSI_table2$PSI)))
+    
+    One Sample t-test
+    
+    data:  log10(Sample_table2$PSI)
+    t = -0.29791, df = 49, p-value = 0.767
+    alternative hypothesis: true mean is not equal to 3.175948
+    95 percent confidence interval:
+      3.175072 3.176598
+    sample estimates:
+      mean of x 
+    3.175835 
+    
+    > summary(PSI_table2)
+    Manufacturing_Lot       PSI      
+    Length:150         Min.   :1463  
+    Class :character   1st Qu.:1497  
+    Mode  :character   Median :1500  
+    Mean   :1500  
+    3rd Qu.:1501  
+    Max.   :1536  
+    > summary(PSI_table)
+    PSI      
+    Min.   :1463  
+    1st Qu.:1497  
+    Median :1500  
+    Mean   :1500  
+    3rd Qu.:1501  
+    Max.   :1536  
+    > sample_n(PSI_table2, 25)
+    # A tibble: 25 x 2
+    Manufacturing_Lot   PSI
+    <chr>             <dbl>
+      1 Lot3              1480.
+    2 Lot3              1486.
+    3 Lot2              1505.
+    4 Lot3              1466.
+    5 Lot3              1508.
+    6 Lot3              1521.
+    7 Lot2              1499.
+    8 Lot1              1501.
+    9 Lot1              1499.
+    10 Lot2              1503.
+    # ... with 15 more rows
+    > Sample_table2 <- sample_n(PSI_table2, 25)
+    > Sample_table2
+    # A tibble: 25 x 2
+    Manufacturing_Lot   PSI
+    <chr>             <dbl>
+      1 Lot1              1501.
+    2 Lot2              1501.
+    3 Lot2              1497.
+    4 Lot2              1499.
+    5 Lot3              1494.
+    6 Lot2              1502.
+    7 Lot1              1498.
+    8 Lot1              1500.
+    9 Lot3              1497.
+    10 Lot3              1490.
+    # ... with 15 more rows
+    > by(Sample_table2, Manufacturing_Lot)
+    Error in tapply(seq_len(25L), list(Manufacturing_Lot = c("Lot1", "Lot1",  : 
+                                                               arguments must have same length
+                                                             > by(Sample_table2, Manufacturing_Lot, PSI)
+                                                             Error in tapply(seq_len(25L), list(Manufacturing_Lot = c("Lot1", "Lot1",  : 
+                                                                                                                        arguments must have same length
+                                                                                                                      > t.test(log10(Sample_table2$PSI),mu=mean(log10(PSI_table2$PSI)))
+                                                                                                                      
+                                                                                                                      One Sample t-test
+                                                                                                                      
+                                                                                                                      data:  log10(Sample_table2$PSI)
+                                                                                                                      t = -1.4351, df = 24, p-value = 0.1642
+                                                                                                                      alternative hypothesis: true mean is not equal to 3.175948
+                                                                                                                      95 percent confidence interval:
+                                                                                                                        3.174728 3.176167
+                                                                                                                      sample estimates:
+                                                                                                                        mean of x 
+                                                                                                                      3.175448 
+                                                                                                                      
+                                                                                                                      > Sample_table2
+                                                                                                                      # A tibble: 25 x 2
+                                                                                                                      Manufacturing_Lot   PSI
+                                                                                                                      <chr>             <dbl>
+                                                                                                                        1 Lot1              1501.
+                                                                                                                      2 Lot2              1501.
+                                                                                                                      3 Lot2              1497.
+                                                                                                                      4 Lot2              1499.
+                                                                                                                      5 Lot3              1494.
+                                                                                                                      6 Lot2              1502.
+                                                                                                                      7 Lot1              1498.
+                                                                                                                      8 Lot1              1500.
+                                                                                                                      9 Lot3              1497.
+                                                                                                                      10 Lot3              1490.
+                                                                                                                      # ... with 15 more rows
+                                                                                                                      > by(Sample_table2, Manufacturing_Lot, Lot1)
+                                                                                                                      Error in tapply(seq_len(25L), list(Manufacturing_Lot = c("Lot1", "Lot1",  : 
+                                                                                                                                                                                 arguments must have same length
+                                                                                                                                                                               > PSI_table2
+                                                                                                                                                                               # A tibble: 150 x 2
+                                                                                                                                                                               Manufacturing_Lot   PSI
+                                                                                                                                                                               <chr>             <dbl>
+                                                                                                                                                                                 1 Lot1              1499.
+                                                                                                                                                                               2 Lot1              1500.
+                                                                                                                                                                               3 Lot1              1501.
+                                                                                                                                                                               4 Lot1              1500.
+                                                                                                                                                                               5 Lot1              1498.
+                                                                                                                                                                               6 Lot1              1500.
+                                                                                                                                                                               7 Lot1              1500.
+                                                                                                                                                                               8 Lot1              1501.
+                                                                                                                                                                               9 Lot1              1501.
+                                                                                                                                                                               10 Lot1              1501.
+                                                                                                                                                                               # ... with 140 more rows
+                                                                                                                                                                               > PSI_table
+                                                                                                                                                                               # A tibble: 150 x 1
+                                                                                                                                                                               PSI
+                                                                                                                                                                               <dbl>
+                                                                                                                                                                                 1 1499.
+                                                                                                                                                                               2 1500.
+                                                                                                                                                                               3 1501.
+                                                                                                                                                                               4 1500.
+                                                                                                                                                                               5 1498.
+                                                                                                                                                                               6 1500.
+                                                                                                                                                                               7 1500.
+                                                                                                                                                                               8 1501.
+                                                                                                                                                                               9 1501.
+                                                                                                                                                                               10 1501.
+                                                                                                                                                                               # ... with 140 more rows
+                                                                                                                                                                               > subset(PSI_table2, Lot1)
+                                                                                                                                                                               Error in eval(e, x, parent.frame()) : object 'Lot1' not found
+                                                                                                                                                                               > subset(PSI_table2, Manufacturing_Lot=="Lot1")
+                                                                                                                                                                               # A tibble: 50 x 2
+                                                                                                                                                                               Manufacturing_Lot   PSI
+                                                                                                                                                                               <chr>             <dbl>
+                                                                                                                                                                                 1 Lot1              1499.
+                                                                                                                                                                               2 Lot1              1500.
+                                                                                                                                                                               3 Lot1              1501.
+                                                                                                                                                                               4 Lot1              1500.
+                                                                                                                                                                               5 Lot1              1498.
+                                                                                                                                                                               6 Lot1              1500.
+                                                                                                                                                                               7 Lot1              1500.
+                                                                                                                                                                               8 Lot1              1501.
+                                                                                                                                                                               9 Lot1              1501.
+                                                                                                                                                                               10 Lot1              1501.
+                                                                                                                                                                               # ... with 40 more rows
+                                                                                                                                                                               > PSI_table2_Lot1 <- subset(PSI_table2, Manufacturing_Lot=="Lot1")
+                                                                                                                                                                               > PSI_table2_Lot2 <- subset(PSI_table2, Manufacturing_Lot=="Lot2")
+                                                                                                                                                                               > PSI_table2_Lot3 <- subset(PSI_table2, Manufacturing_Lot=="Lot3")
+                                                                                                                                                                               > Sample_PSI_table2_Lot1 <- sample_n(PSI_table2_Lot1, 25)
+                                                                                                                                                                               > Sample_PSI_table2_Lot2 <- sample_n(PSI_table2_Lot2, 25)
+                                                                                                                                                                               > Sample_PSI_table2_Lot3 <- sample_n(PSI_table2_Lot3, 25)
+                                                                                                                                                                               > t.test(log10(Sample_PSI_table2_Lot1$PSI),mu=mean(log10(PSI_table2_Lot1$PSI)))
+                                                                                                                                                                               
+                                                                                                                                                                               One Sample t-test
+                                                                                                                                                                               
+                                                                                                                                                                               data:  log10(Sample_PSI_table2_Lot1$PSI)
+                                                                                                                                                                               t = -0.20319, df = 24, p-value = 0.8407
+                                                                                                                                                                               alternative hypothesis: true mean is not equal to 3.176096
+                                                                                                                                                                               95 percent confidence interval:
+                                                                                                                                                                                 3.175943 3.176222
+                                                                                                                                                                               sample estimates:
+                                                                                                                                                                                 mean of x 
+                                                                                                                                                                               3.176083 
+                                                                                                                                                                               
+                                                                                                                                                                               > t.test(log10(Sample_PSI_table2_Lot2$PSI),mu=mean(log10(PSI_table2_Lot2$PSI)))
+                                                                                                                                                                               
+                                                                                                                                                                               One Sample t-test
+                                                                                                                                                                               
+                                                                                                                                                                               data:  log10(Sample_PSI_table2_Lot2$PSI)
+                                                                                                                                                                               t = 0.31505, df = 24, p-value = 0.7554
+                                                                                                                                                                               alternative hypothesis: true mean is not equal to 3.175966
+                                                                                                                                                                               95 percent confidence interval:
+                                                                                                                                                                                 3.175639 3.176411
+                                                                                                                                                                               sample estimates:
+                                                                                                                                                                                 mean of x 
+                                                                                                                                                                               3.176025 
+                                                                                                                                                                               
+                                                                                                                                                                               > t.test(log10(Sample_PSI_table2_Lot3$PSI),mu=mean(log10(PSI_table2_Lot3$PSI)))
+                                                                                                                                                                               
+                                                                                                                                                                               One Sample t-test
+                                                                                                                                                                               
+                                                                                                                                                                               data:  log10(Sample_PSI_table2_Lot3$PSI)
+                                                                                                                                                                               t = 0.60271, df = 24, p-value = 0.5524
+                                                                                                                                                                               alternative hypothesis: true mean is not equal to 3.175782
+                                                                                                                                                                               95 percent confidence interval:
+                                                                                                                                                                                 3.174324 3.178443
+                                                                                                                                                                               sample estimates:
+                                                                                                                                                                                 mean of x 
+                                                                                                                                                                               3.176383 
