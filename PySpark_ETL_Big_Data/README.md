@@ -1,5 +1,2 @@
-# UCB_Data_Analytics_Bootcamp
-
-This repository is my portfolio of completed module challenges for the UC Berkeley Extension Data Analytics Bootcamp.
-New module challenges will be added upon completion.
-Expected program completion date is Oct 2020.
+Link to Google Colab notebook:
+https://colab.research.google.com/drive/1tvXs_xQgMlolJ3BWd497CD33NXdH30-i?usp=sharing
