@@ -1,1 +1,1 @@
-# Portfolio of completed module challenges for the UC Berkeley Extension Data Analytics Bootcamp.
+### This repository is a portfolio of completed module challenges for the Data Analytics Bootcamp at UC Berkeley Extension.
