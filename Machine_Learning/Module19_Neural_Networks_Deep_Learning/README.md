@@ -4,6 +4,6 @@ The purpose of this project is to use machine learning techniques to support fut
 * Layer 2: 50 neurons, activation = "relu"
 * Layer 3: 1 neurons, activation = "sigmoid"
 
-<img width="220" alt="Model Accuracy - Test Dataset" src="https://user-images.githubusercontent.com/65242270/95001029-02bd2a80-057b-11eb-9cad-2df89c03d6ed.PNG">
+<img width="203" alt="Model Accuracy - Test Dataset" src="https://user-images.githubusercontent.com/65242270/95488422-60ba8b00-094a-11eb-8379-de785e867390.PNG">
 
-Module Result: The test dataset achieved the target performance.
+Module Result: The test dataset achieved 75.5% accuracy, which meets the target performance of >75% accuracy.
